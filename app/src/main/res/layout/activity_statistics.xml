@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    >
+  <com.hjq.bar.TitleBar
+      android:id="@+id/tb_statistics_tool_bar"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:background="@color/titleColor"
+      app:title="统计"
+      app:titleColor="@color/titleTextColor"
+      app:rightColor="@color/titleTextColor"
+      app:leftColor="@color/titleTextColor"
+      app:titleSize="18sp"
+      />
+
+
+  <android.support.v4.view.ViewPager
+      android:id="@+id/myViewPager"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_weight="1"
+
+      />
+
+  <LinearLayout
+      android:layout_width="match_parent"
+      android:layout_height="40dp"
+      android:orientation="horizontal"
+      >
+    <TextView
+        android:id="@+id/tv_3day_average"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:text="3日平均"
+        android:textSize="15sp"
+        android:gravity="center"
+        android:textColor="@color/textColorPrimary"
+        android:background="@color/noSelectButtonColor"
+        />
+    <TextView
+        android:id="@+id/tv_7day_average"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:text="7日平均"
+        android:textSize="15sp"
+        android:gravity="center"
+        android:textColor="@color/textColorPrimary"
+        android:background="@color/noSelectButtonColor"
+        />
+    <TextView
+        android:id="@+id/tv_total_day"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:text="30日平均"
+        android:textSize="15sp"
+        android:gravity="center"
+        android:textColor="@color/textColorPrimary"
+        android:background="@color/noSelectButtonColor"
+        />
+  </LinearLayout>
+</LinearLayout>

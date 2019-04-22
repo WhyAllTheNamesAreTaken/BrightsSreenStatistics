@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.blackheart.brightscreenstatistics">
+
+  <uses-permission
+      android:name="android.permission.PACKAGE_USAGE_STATS"
+      tools:ignore="ProtectedPermissions"/>
+  <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED"/>
+  <uses-permission android:name="android.permission.FOREGROUND_SERVICE"/>
+
+  <application
+      android:name=".MyApplication"
+      android:allowBackup="true"
+      android:icon="@mipmap/ic_launcher"
+      android:label="低头族亮屏时间统计"
+      android:persistent="true"
+      android:roundIcon="@mipmap/ic_launcher_round"
+      android:supportsRtl="true"
+      android:theme="@style/Theme.AppCompat.Light.NoActionBar">
+    <receiver
+        android:name=".receiver.NotificationClickReceiver"
+        android:enabled="true"
+        android:exported="true">
+    </receiver>
+
+    <activity android:name=".SettingActivity">
+    </activity>
+
+    <service
+        android:name=".service.ServiceKeepService"
+        android:enabled="true"
+        android:exported="true">
+    </service>
+
+    <receiver
+        android:name=".AppTimeReceiver"
+        android:enabled="true"
+        android:exported="true">
+      <intent-filter>
+        <action android:name="android.intent.action.BOOT_COMPLETED"/>
+        <action android:name="android.intent.action.USER_PRESENT"/>
+        <action android:name="Service Destroy"/>
+      </intent-filter>
+    </receiver>
+
+    <activity android:name=".StatisticsActivity">
+    </activity>
+    <activity android:name=".AppDurationActivity">
+    </activity>
+
+    <service
+        android:name=".service.AppTimeService"
+        android:enabled="true"
+        android:exported="true">
+    </service>
+
+    <activity android:name=".MainActivity">
+      <intent-filter>
+        <action android:name="android.intent.action.MAIN"/>
+
+        <category android:name="android.intent.category.LAUNCHER"/>
+      </intent-filter>
+    </activity>
+  </application>
+
+</manifest>

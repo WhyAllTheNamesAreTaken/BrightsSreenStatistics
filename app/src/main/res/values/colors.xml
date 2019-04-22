@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+  <color name="colorPrimary">#008577</color>
+  <color name="colorPrimaryDark">#00574B</color>
+  <color name="colorAccent">#D81B60</color>
+
+  <color name="textColorPrimary">#666666</color>
+  <color name="viewBackground">@android:color/white</color>
+  <color name="titleColor">#17C75D</color>
+<color name="shapeColor">#D5D5D5</color>
+  <color name="navigationBackground">@android:color/white</color>
+  <color name="leftScaleColor">#ff9933</color>
+  <color name="rightScaleColor">@android:color/white</color>
+  <color name="noSelectButtonColor">@android:color/white</color>
+  <color name="selectButtonColor">#DEDEDE</color>
+  <color name="titleTextColor">#FFFFFF</color>
+</resources>
